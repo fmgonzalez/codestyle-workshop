@@ -1,0 +1,27 @@
+{
+    "name": "fmgonzalez/codestyle",
+    "description": "Codestyle boilerplate",
+    "authors": [
+        {
+          "name": "Francisco M. González",
+          "email": "fmgonzalez76@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "post-install-cmd": [
+        "echo 'Adding code style pre-commit hook'",
+        "cp -u pre-commit .git/hooks/pre-commit"
+    ],
+    "post-update-cmd": [
+        "echo 'Adding code style pre-commit hook'",
+        "cp -u pre-commit .git/hooks/pre-commit"
+    ]
+}
