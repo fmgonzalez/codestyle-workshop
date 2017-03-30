@@ -16,12 +16,8 @@
             "": "src/"
         }
     },
-    "post-install-cmd": [
-        "echo 'Adding code style pre-commit hook'",
-        "cp -u pre-commit .git/hooks/pre-commit"
-    ],
-    "post-update-cmd": [
-        "echo 'Adding code style pre-commit hook'",
-        "cp -u pre-commit .git/hooks/pre-commit"
-    ]
+    "scripts": {
+      "post-install-cmd": "cp -u pre-commit .git/hooks/pre-commit",
+      "post-update-cmd": "cp -u pre-commit .git/hooks/pre-commit"
+    }
 }
